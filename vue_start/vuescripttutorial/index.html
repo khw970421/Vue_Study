@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:class="{ orange : active}">{{counter}}</div>
+    <button v-on:click="increase">Click me!</button>
+</div>
+</body>
+<script>
+
+  const App = {
+    data() {
+      return {
+        counter: 0
+      }
+    },
+    methods : {
+      increase(){
+        this.counter += 1;
+      }
+    }
+  }
+
+  const app = Vue.createApp(App).mount('#app')
+</script>
+</html>
