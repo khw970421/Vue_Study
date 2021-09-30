@@ -17,6 +17,6 @@ npm i -D html-webpack-plugin
 
 
 ## parcel vs webpack
->parcel에 비해 webpack은 설치할 것들이 많다. 
->vue 관련도 parcel은 간단하나 webpack은 설치할 내용이 많다. 
+>parcel에 비해 webpack은 설치할 것들이 많다. <br>
+>vue 관련도 parcel은 간단하나 webpack은 설치할 내용이 많다. <br>
 >대신 parcel은 이와같은 세밀한 번들러 제어를 할 수 없다.  
