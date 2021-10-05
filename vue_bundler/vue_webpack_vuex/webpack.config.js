@@ -13,6 +13,7 @@ module.exports = {
   entry : './src/main.js',
   output : {
     path:path.resolve(__dirname, 'dist'),
+    publicPath:'/',
     clean:true
   },
   // You may need an appropriate loader to handle this file type
@@ -37,4 +38,7 @@ module.exports = {
       template : path.resolve(__dirname , 'src/index.html')
     }),
   ],
+  devServer:{
+    historyApiFallback : true
+  }
 }
