@@ -1,13 +1,13 @@
 <template>
-<div class="app_inner">
-    <LNB></LNB>
+  <div class="app_inner">
+    <LNB />
     <div class="app_page">
-        <Header></Header>
-        <div class="page_container">
-            <RouterView></RouterView>
-        </div>
+      <Header />
+      <div class="page_container">
+        <RouterView />
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>

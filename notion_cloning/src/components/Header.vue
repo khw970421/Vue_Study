@@ -1,29 +1,37 @@
 <template>
-    <header>
-        <div class="titles">
-            <template v-for="(workspace,idx) in $store.state.workspace.currentWorkspacePath"
-                      : key="workspace.id">
-                <div v-if="idx > 0"
-                     class="division">/</div>
-                <button
-                        class="title"
-                        @click="$router.push({
-                        name : 'Workspace',
-                        params :{
-                          id:workspace.id
-                        }
-                        })">
-                    {{workspace.title || '제목 없음'}}
-                </button>
-            </template>
+  <header>
+    <div class="titles">
+      <template
+        v-for="(workspace,idx) in $store.state.workspace.currentWorkspacePath"
+        key="workspace.id"
+        :
+      >
+        <div
+          v-if="idx > 0"
+          class="division"
+        >
+          /
         </div>
-        <div class="actions">
-            <button>공유</button>
-            <button>업데이트</button>
-            <button>즐겨찾기</button>
-            <button>기타</button>
-        </div>
-    </header>
+        <button
+          class="title"
+          @click="$router.push({
+            name : 'Workspace',
+            params :{
+              id:workspace.id
+            }
+          })"
+        >
+          {{ workspace.title || '제목 없음' }}
+        </button>
+      </template>
+    </div>
+    <div class="actions">
+      <button>공유</button>
+      <button>업데이트</button>
+      <button>즐겨찾기</button>
+      <button>기타</button>
+    </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>

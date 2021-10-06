@@ -1,25 +1,33 @@
 <template>
-    <nav ref="nav"
-            :style="{width:`${navWidth}px`}">
-        <div class="header">
-            <div class="user-profile"></div>
-            Leon's Notion
-        </div>
-        <ul>
-            <WorkspaceItem
-                    v-for="workspace in workspaces"
-                    :key="workspace.id"
-                    :workspace="workspace">
-            </WorkspaceItem>
-        </ul>
-        <div class="actions">
-            <div class="action" @click="$store.dispatch('workspace/createWorkspace')">
-                <span class="material-icons">add</span> 새로운 페이지
-            </div>
-        </div>
-        <div    ref="resizeHandle"
-                class="resize-handle" @dblclick="navWidth = 240"></div>
-    </nav>
+  <nav
+    ref="nav"
+    :style="{width:`${navWidth}px`}"
+  >
+    <div class="header">
+      <div class="user-profile" />
+      Leon's Notion
+    </div>
+    <ul>
+      <WorkspaceItem
+        v-for="workspace in workspaces"
+        :key="workspace.id"
+        :workspace="workspace"
+      />
+    </ul>
+    <div class="actions">
+      <div
+        class="action"
+        @click="$store.dispatch('workspace/createWorkspace')"
+      >
+        <span class="material-icons">add</span> 새로운 페이지
+      </div>
+    </div>
+    <div
+      ref="resizeHandle"
+      class="resize-handle"
+      @dblclick="navWidth = 240"
+    />
+  </nav>
 </template>
 
 <script>

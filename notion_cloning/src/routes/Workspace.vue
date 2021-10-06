@@ -1,22 +1,25 @@
 <template>
-    <section :key="$route.params.id">
-        <div class="inner">
-            <div class="title"
-                 ref="title"
-                 contenteditable
-                 placeholder="제목 없음"
-                 @input="onInput">
-                {{title}}
-            </div>
-            <div class="content"
-                 ref="content"
-                 contenteditable
-                 placeholder = "내용 입력하세요!"
-                @input="onInput"
-                v-html="content">
-            </div>
-        </div>
-    </section>
+  <section :key="$route.params.id">
+    <div class="inner">
+      <div
+        ref="title"
+        class="title"
+        contenteditable
+        placeholder="제목 없음"
+        @input="onInput"
+      >
+        {{ title }}
+      </div>
+      <div
+        ref="content"
+        class="content"
+        contenteditable
+        placeholder="내용 입력하세요!"
+        @input="onInput"
+        v-html="content"
+      />
+    </div>
+  </section>
 </template>
 
 <script>
