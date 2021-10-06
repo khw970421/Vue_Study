@@ -1,7 +1,7 @@
 {
-  "presets": ["@babel/preset-ent"],
+  "presets": ["@babel/preset-env"],
   "plugins": [
-    ["@babel/plugin-transfrom-runtime",{
+    ["@babel/plugin-transform-runtime",{
       "corejs" : 3
     }]
   ]
